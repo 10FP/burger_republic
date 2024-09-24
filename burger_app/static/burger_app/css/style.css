@@ -413,7 +413,7 @@ input[type="text"] {
 }
 .main-container p {
   font-size: 14px;
-  color: #a59e90;
+  color: #fff;
   line-height: 30px;
 }
 .triangle {
@@ -733,7 +733,7 @@ a.icon-link.arrow:hover {
   object-fit: contain;
 }
 .full-width .slide .inner-slide .slide-desc {
-  display: block;
+  display: none;
   width: 642px;
   height: 232px;
   background: transparent;
@@ -912,7 +912,7 @@ ul#promotion-product {
 }
 ul#promotion-product li .promotion-product-container {
   width: 370px;
-  height: 200px;
+  height: 250px !important;
   background: white;
   -webkit-border-radius: 12px 12px 12px 12px;
   -moz-border-radius: 12px 12px 12px 12px;
@@ -1258,19 +1258,20 @@ ul#list-updates.jobs li:nth-child(2n+1) {
   padding-top: 4px;
   margin-right: 25px;
   float: left;
+
 }
 #footer .footer-info .footer-logo img {
   max-width: 45px;
 }
 #footer .footer-info .footer-address,
 #footer .footer-info .footer-contact {
-  color: #979185;
+  color: #fff;
   line-height: 24px;
   float: left;
 }
 #footer .footer-info .footer-address a,
 #footer .footer-info .footer-contact a {
-  color: #979185;
+  color: #fff;
   text-decoration: none;
 }
 #footer .footer-info .footer-address {
@@ -3383,6 +3384,11 @@ ul#list-updates.jobs li:nth-child(2n+1) {
 /* -------------------------------------------------------*/
 /* 14. g. 1000px - 1199px                                 */
 /* -------------------------------------------------------*/
+@media screen and (min-width: 1000px) {
+  .full-width {
+    top: -250px;
+  }
+}
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
   /* -------------------------------------------------------*/
   /* Grid Settings for Each Stop                            */

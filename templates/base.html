@@ -37,7 +37,7 @@
     </script>
 
     <script type="text/javascript" src="{% static 'burger_app/js/less.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'burger_app/js/retina.min.js' %}"></script>
+    <!-- <script type="text/javascript" src="{% static 'burger_app/js/retina.min.js' %}"></script> -->
 	<script type="text/javascript" src="{% static 'burger_app/js/modernizr.custom.71422.js' %}"></script>
 </head>
 
@@ -47,8 +47,8 @@
         <div class="close-menu-btn icon-menu active">&nbsp;</div>    
         <ul>
             <li class="active"><a href="{% url 'burger_app:index' %}">Home</a></li>
+            <li><a href="{% url 'burger_app:our_food' %}">Our Food | Offers</a></li>
             <li><a href="{% url 'burger_app:about' %}">About Us</a></li>
-            <li><a href="{% url 'burger_app:our_food' %}">Our Food</a></li>
             <li><a href="{% url 'burger_app:contact' %}">Contact</a></li>
         </ul>
     </nav>
@@ -75,18 +75,19 @@
                             <div class="logo-icon"><img src="{% static 'burger_app/img/footer-logo.png' %}" /></div>
                         </div>
                         <div class="footer-address">
-                            Company name</br>523 Avenue Street, New York
+                            Burger Republic</br>1171 Dundas St W, Toronto, ON M6J 1X3, Canada
                         </div>
                         <div class="footer-contact">
-                            (432) 421 693 812<br/><a href="#">office@companyname.com</a>
+                            <a href="tel:+14168491171">+1 (416) 849 1171</a><br/><a href="#">office@companyname.com</a>
                         </div>
                     </div>
                     <div class="footer-newsletter col">
                         <div class="footer-newsletter-container">
                             <form id="subscribe-newsletter">
-                                <input type="email" class="footer-input-text" placeholder="Enter your email to join newsletter..."/>
-                                <input type="submit" class="button grey-button footer-input-submit" value="Subscribe"/>
+                                <input id="email" type="email" class="footer-input-text" placeholder="Enter your email to join newsletter..."/>
+                                <input id="subscribe-btn" type="button" class="button grey-button footer-input-submit" value="Subscribe"/>
                             </form>
+                            <p id="response-message" style="margin-top: 75px;"></p>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -121,5 +122,27 @@
     {% block extraJS %}
     
     {% endblock extraJS %}
+    <script>
+        document.getElementById('subscribe-btn').addEventListener('click', function() {
+          const email = document.getElementById('email').value;
+          const csrfToken = '{{ csrf_token }}'; 
+      
+          fetch('/subscribe/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-CSRFToken': csrfToken  
+            },
+            body: JSON.stringify({ email: email })
+          })
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('response-message').textContent = data.message;
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        });
+      </script>
 </body>
 

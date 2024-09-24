@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Hamburger
+from .models import Hamburger, Subscriber
 
 # Register your models here.
 
@@ -7,5 +7,13 @@ from .models import Hamburger
 class HamburgerAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'price', 'image')
 
+class SubscriberAdmin(admin.ModelAdmin):
+    list_display = ('email', 'subscribed_on')
+    search_fields = ('email', 'subscribed_on')
+    list_filter = ('email', 'subscribed_on')
+
+
+
 
 admin.site.register(Hamburger, HamburgerAdmin)
+admin.site.register(Subscriber, SubscriberAdmin)
