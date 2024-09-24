@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block extraCss %}
+<link rel="stylesheet" href="{% static 'burger_app/css/food.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
+{% endblock extraCss %}
+{% block content %}
+    <div class="site-overlay"></div>
+
+    <!-- Your Content -->
+    <div id="container">
+
+        <div class="container">
+            <div class="main-container row">
+                <div id="logo">
+                    <a href="index.html">
+                        <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" /></div>
+                        <div class="logo-type">Company Name</div>
+                        <div class="logo-slogan">slogan here</div> 
+                    </a> 
+                </div>
+            </div>
+        </div>
+
+        <div id="full-width-header" class="full-width">
+            <!-- <div class="triangle top"></div> -->
+            <div class="inner">
+                <div class="slide">
+                    <div class="inner-slide">
+                        <img class="about_image"  src="{% static 'burger_app/img/slider/burger_slider.jpg' %}" style="max-height: 560px!important;">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="triangle bottom"></div> -->
+        </div>
+        
+        <div class="clear"></div>
+
+        <div class="container full-page">
+            <div id="our-food" class="main-container">
+                <div class="row">
+                    <div class="main-content col">
+                        <div class="title">
+                            <h1>Our Food</h1>
+                        </div>
+                        <div class="intro">
+                            <h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</h2>
+                        </div>
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                
+                
+                
+            </div>
+        </div>
+        
+        <div class="clear space-area"></div>
+        
+        
+        
+{% endblock content %}
+{% block extraJS %}
+<script src="{% static 'burger_app/js/food.js' %}"></script>
+
+{% endblock extraJS %}

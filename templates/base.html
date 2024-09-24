@@ -1,0 +1,125 @@
+
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
+<!--[if IE 9 ]> <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+
+<head>
+    <!-- Load Google font on the first <head> to prevent error in IE -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,800,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<title>Burger Bar</title>
+	<meta name="author" content="Burger Bar" />
+	<meta name="description" content="Burger Bar Description" />
+	<meta name="keywords"  content="Burger Bar Keyword" />
+  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <link rel="stylesheet" href="{% static 'burger_app/css/style.css' %}">
+    {% block extraCss %}
+    
+    {% endblock extraCss %}
+
+    
+    <script>
+      less = {
+        env: "development",
+        async: false,
+        fileAsync: false,
+        poll: 1000,
+        functions: {},
+        dumpLineNumbers: "comments",
+        relativeUrls: false
+      };
+    </script>
+
+    <script type="text/javascript" src="{% static 'burger_app/js/less.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'burger_app/js/retina.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'burger_app/js/modernizr.custom.71422.js' %}"></script>
+</head>
+
+<body>
+    <!-- Main Menu -->
+    <nav class="menu menu-left">
+        <div class="close-menu-btn icon-menu active">&nbsp;</div>    
+        <ul>
+            <li class="active"><a href="{% url 'burger_app:index' %}">Home</a></li>
+            <li><a href="{% url 'burger_app:about' %}">About Us</a></li>
+            <li><a href="{% url 'burger_app:our_food' %}">Our Food</a></li>
+            <li><a href="{% url 'burger_app:contact' %}">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- Menu Button -->
+    <div class="menu-btn"><span class="icon-menu">&nbsp;</span> Menu</div>
+
+    <!-- Entire area of website, menu will dissaper when this area clicked -->
+    <div class="site-overlay"></div>
+{% block content %}
+
+{% endblock content %}
+
+
+            {% comment %} <div class="clear space-area"></div> {% endcomment %}
+        
+
+        {% comment %} <div class="triangle top footer"></div> {% endcomment %}
+        <!-- Footer Area -->
+        <div class="container footer">
+            <div id="footer" class="main-container">
+                <div class="footer-top row">
+                    <div class="footer-info col">
+                        <div class="footer-logo">
+                            <div class="logo-icon"><img src="{% static 'burger_app/img/footer-logo.png' %}" /></div>
+                        </div>
+                        <div class="footer-address">
+                            Company name</br>523 Avenue Street, New York
+                        </div>
+                        <div class="footer-contact">
+                            (432) 421 693 812<br/><a href="#">office@companyname.com</a>
+                        </div>
+                    </div>
+                    <div class="footer-newsletter col">
+                        <div class="footer-newsletter-container">
+                            <form id="subscribe-newsletter">
+                                <input type="email" class="footer-input-text" placeholder="Enter your email to join newsletter..."/>
+                                <input type="submit" class="button grey-button footer-input-submit" value="Subscribe"/>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="footer-bottom row">
+                    <div class="footer-copyright col">
+                        <div class="footer-copyright-text">Copyright 2014 Company name. Designed by Themezy. All rights reserved.</div>
+                    </div>
+                    <div class="footer-social-media col">
+                        <div class="social-media-icon">
+                            <span class="icon-social-media icon-facebook">&nbsp;</span>
+                            <span class="icon-social-media icon-twitter">&nbsp;</span>
+                            <span class="icon-social-media icon-google">&nbsp;</span>
+                            <span class="icon-social-media icon-pinterest">&nbsp;</span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+       
+    </div>
+
+
+    <script type="text/javascript" src="{% static 'burger_app/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'burger_app/js/pushy.js' %}"></script>
+    <script type="text/javascript" src="{% static 'burger_app/js/slider.js' %}"></script>
+    <script type="text/javascript" src="{% static 'burger_app/js/fastclick.js' %}"></script>
+    <script type="text/javascript" src="{% static 'burger_app/js/script.js' %}"></script>
+    {% block extraJS %}
+    
+    {% endblock extraJS %}
+</body>
+

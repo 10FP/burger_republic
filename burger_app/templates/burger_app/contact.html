@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+
+
+    <!-- Your Content -->
+    <div id="container">
+
+        <div class="container">
+            <div class="main-container row">
+                <div id="logo">
+                    <a href="index.html">
+                        <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" /></div>
+                        <div class="logo-type">Company Name</div>
+                        <div class="logo-slogan">slogan here</div> 
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="full-width-header" class="full-width">
+            
+            <iframe style="margin-top: 100px; border: 0px solid transparent; border-radius: 100px; margin-left: 5%; margin-right: 5%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202844.46260607112!2d-122.20590634344278!3d37.40296192936466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilikon%20Vadisi%2C%20Kaliforniya%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1727008750656!5m2!1str!2str" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            
+        </div>
+        
+        <div class="clear"></div>
+
+        <div class="container full-page">
+            <div id="contact-us" class="main-container">
+                <div class="row">
+                    <div class="main-content col">
+                        <div class="title">
+                            <h1>Contact</h1>
+                        </div>
+                        <div class="intro">
+                            <h2>Neque porro quisquam est, qui dolorem ipsum quia dolor.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contact-address col">
+                        <div class="contact-address-container" style="color: white;">
+                            <span class="dot dot-left-top">&nbsp;</span><span class="dot dot-right-top">&nbsp;</span><span class="dot dot-left-bottom">&nbsp;</span><span class="dot dot-right-bottom">&nbsp;</span>
+                            Company name<br/>
+                            523 Avenue Street, New York<br/><br/>
+                            (432) 421 693 812<br/>
+                            office@companyname.com<br/>
+                        </div>
+                    </div>
+                    <div class="contact-form-input-data col">
+                        <div class="contact-form-input-container">
+                            <div class="contact-form-input-icon"><span class="input-icon icon-name">&nbsp;</span></div>
+                            <input type="text" class="contact-form-input-text" placeholder="Your name..."/>
+                        </div>
+                        <div class="contact-form-input-container">
+                            <div class="contact-form-input-icon"><span class="input-icon icon-email">&nbsp;</span></div>
+                            <input type="email" class="contact-form-input-text" placeholder="Email..."/>
+                        </div>
+                        <div class="contact-form-input-container">
+                            <div class="contact-form-input-icon"><span class="input-icon icon-website">&nbsp;</span></div>
+                            <input type="url" class="contact-form-input-text" placeholder="Website..."/>
+                        </div>
+                    </div>
+                    <div class="contact-form-input-message col">
+                        <div class="contact-form-input-container">
+                            <div class="contact-form-input-icon"><span class="input-icon icon-message">&nbsp;</span></div>
+                            <textarea placeholder="Message..." class="contact-form-input-text" ></textarea>
+                        </div>
+                        <div class="button-container">
+                            <input type="submit" value="Send Message" class="button grey-button contact-form-input-submit"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="clear space-area"></div>
+        
+        <div class="triangle top footer"></div>
+        {% endblock content %}
