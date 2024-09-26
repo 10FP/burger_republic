@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block extraCss %}
 <link rel="stylesheet" href="{% static 'burger_app/css/food.css' %}">
+<link rel="stylesheet" href="{% static 'burger_app/css/menu.css' %}">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
 {% endblock extraCss %}
@@ -16,14 +18,14 @@
                 <div id="logo">
                     <a href="index.html">
                         <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" /></div>
-                        <div class="logo-type">Company Name</div>
-                        <div class="logo-slogan">slogan here</div> 
+                        <div class="logo-type">Burger Republic</div>
+
                     </a> 
                 </div>
             </div>
         </div>
 
-        <div id="full-width-header" class="full-width">
+        <div id="full-width-header" class="full-width" style="top: 0px;">
             <!-- <div class="triangle top"></div> -->
             <div class="inner">
                 <div class="slide">
@@ -60,11 +62,249 @@
         </div>
         
         <div class="clear space-area"></div>
+
+        <div class="triangle top promotion"></div>
+        <!-- Container for promotion content -->
+        <div class="container promotion">
+            <div id="promotion" class="main-container">
+                <div class="row">
+                    <div class="promotion-title col">
+                        <div class="title">
+                            <h1>Check out our offers</h1>
+                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                        </div>
+                    </div>
+                    <div class="promotion-button col">
+                        <div class="button-container">
+                             <a class="button white-button">See all promotions</a> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+                <ul id="promotion-product" class="row">
+                    
+                    
+                    
+                    <section class="gallery-2" style="margin-top: 75px; border-bottom: 2px solid red;">
+                        <div class="view-image">
+                            <img src="https://images.unsplash.com/photo-1668954206766-404e981f57f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60." alt="gms yapı inşaat bostancı">
+                            <span>X</span>
+                            <i class="fa-solid fa-circle-right fa-beat-fade next-image-button" style="color: #fff;"></i>
+                            <i class="fa-solid fa-circle-left fa-beat-fade prev-image-button" style="color: #fff;"></i>
+                        </div>
+                    
+                        <div class="image-container">
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                
+            
+                            
+                            
+                        </div>
+                      </section>
+
+
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+
+            <!-- For fix float problem and give space area with height 90px -->
+            <div class="clear space-area"></div>
+        </div>
+        <div class="triangle bottom promotion"></div>
+
+        <div class="triangle top promotion"></div>
+        <!-- Container for promotion content -->
+        <div class="container promotion">
+            <div id="promotion" class="main-container">
+                <div class="row">
+                    <div class="promotion-title col">
+                        <div class="title">
+                            <h1>Check out our offers</h1>
+                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                        </div>
+                    </div>
+                    <div class="promotion-button col">
+                        <div class="button-container">
+                             <a class="button white-button">See all promotions</a> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+                <ul id="promotion-product" class="row">
+                    
+                    
+                    
+                    <section class="gallery-2" style="margin-top: 75px; border-bottom: 2px solid red;">
+                        <div class="view-image">
+                            <img src="https://images.unsplash.com/photo-1668954206766-404e981f57f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyMHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60." alt="gms yapı inşaat bostancı">
+                            <span>X</span>
+                            <i class="fa-solid fa-circle-right fa-beat-fade next-image-button" style="color: #fff;"></i>
+                            <i class="fa-solid fa-circle-left fa-beat-fade prev-image-button" style="color: #fff;"></i>
+                        </div>
+                    
+                        <div class="image-container">
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p style="text-align: center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                <div class="deneme-div" style="width: min-content;">
+                                    <h1 style="margin: 0; text-align: center;">fp10</h1>
+                                    <img src="{% static 'burger_app/img/burger_slider.jpg' %}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio quisquam minus officiis optio. Error perspiciatis deserunt saepe velit, eligendi enim.</p>
+                                </div>
+            
+                                
+            
+                            
+                            
+                        </div>
+                      </section>
+
+
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+
+            <!-- For fix float problem and give space area with height 90px -->
+            <div class="clear space-area"></div>
+        </div>
+        <div class="triangle bottom promotion"></div>
         
         
         
 {% endblock content %}
 {% block extraJS %}
 <script src="{% static 'burger_app/js/food.js' %}"></script>
+<script async>
 
+    let images = document.querySelectorAll(".image-container img");
+    let viewImage = document.querySelector(".view-image");
+    let fullImage = document.querySelector(".view-image img");
+    let closeBtn = document.querySelector(".view-image span");
+    let image = document.querySelector(".image-container");
+    let next = document.querySelector(".next-image-button")
+    let prev = document.querySelector(".prev-image-button")
+    for(let image of images){
+        image.addEventListener("click",function(e){
+            console.log(e);
+            viewImage.style.display = "flex";
+            fullImage.src = e.target.src;
+        })
+        
+    }
+    closeBtn.addEventListener('click',function(){
+        viewImage.style.display = "none";
+    });
+    let lists = document.querySelectorAll(".deneme-img")
+          var imageList = [];
+          for (var i = 0; i < lists.length; i++) {
+            imageList.push(lists[i].src)
+            
+          }
+    next.addEventListener("click", function(){
+          
+          var index = imageList.indexOf(fullImage.src)
+          if (index === imageList.length -1 ) {
+            fullImage.src = imageList[0]
+          } else {
+            fullImage.src = imageList[index + 1]
+            console.log(fullImage.src)
+          }
+          
+          
+        });
+    prev.addEventListener("click", function(){
+          
+          var index = imageList.indexOf(fullImage.src)
+          if (imageList[index] === imageList[0]) {
+            fullImage.src = imageList[imageList.length - 1]
+          } else {
+            fullImage.src = imageList[index - 1]
+          }
+          
+          
+        });
+    
+  </script>
 {% endblock extraJS %}

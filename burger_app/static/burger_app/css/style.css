@@ -4427,7 +4427,7 @@ ul#list-updates.jobs li:nth-child(2n+1) {
     width: 237px;
     -webkit-overflow-scrolling: touch;
     /* enables momentum scrolling in iOS overflow elements */
-    padding-left: 375px;
+    padding-left: 55px;
   }
   .menu.menu-left {
     -webkit-transform: translate3d(-645px, 0, 0);

@@ -118,54 +118,7 @@
 
         <div class="clear"></div>
 
-        <div class="triangle top promotion"></div>
-        <!-- Container for promotion content -->
-        <div class="container promotion">
-            <div id="promotion" class="main-container">
-                <div class="row">
-                    <div class="promotion-title col">
-                        <div class="title">
-                            <h1>Check out our offers</h1>
-                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
-                        </div>
-                    </div>
-                    <div class="promotion-button col">
-                        <div class="button-container">
-                             <a class="button white-button">See all promotions</a> 
-                        </div>
-                    </div>
-                </div>
-
-                <div class="clear"></div>
-
-                <ul id="promotion-product" class="row">
-                    
-                    
-                    
-                    {% for burger in burger %}
-                    <li class="product col">
-                        <div class="promotion-product-container">
-                            <span class="dot dot-left-top">&nbsp;</span><span class="dot dot-right-top">&nbsp;</span><span class="dot dot-left-bottom">&nbsp;</span><span class="dot dot-right-bottom">&nbsp;</span>
-                            <div class="promotion-product-image"><a href="#"><img src="{{burger.image.url}}" /></a></div>
-                            <div class="promotion-product-desc">
-                                <div class="promotion-product-title"><h4><a href="#">{{burger.name}}</a></h4></div>
-                                <div class="promotion-product-content content"><p style="color: #000;">{{burger.description}}</p></div>
-                            </div>
-                            <div class="price-tag"><span class="price">${{burger.price}}</span></div>
-                        </div>
-                    </li>
-                    {% endfor %}
-
-
-
-                    <div class="clear"></div>
-                </ul>
-            </div>
-
-            <!-- For fix float problem and give space area with height 90px -->
-            <div class="clear space-area"></div>
-        </div>
-        <div class="triangle bottom promotion"></div>
+        
         
         <div class="clear"></div>
 

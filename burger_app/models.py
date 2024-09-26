@@ -8,6 +8,8 @@ class Hamburger(models.Model):
     image = models.ImageField(upload_to='hamburgers/', null=True, blank=True)
 
 
+
+
 class Subscriber(models.Model):
     email = models.EmailField(unique=True)
     subscribed_on = models.DateTimeField(auto_now_add=True)
