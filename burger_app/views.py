@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import Hamburger, Subscriber, MenuHamburger
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from .models import Hamburger, Subscriber, MenuHamburger, Contact
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -19,7 +20,16 @@ def our_food(request):
     return render(request, "burger_app/food.html", context=context)
 
 def contact(request):
-    return render(request, "burger_app/contact.html")
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        message = request.POST.get('message')
+        contact = Contact(name=name, email=email, phone=phone, message=message)
+        contact.save()
+        
+        return redirect(f'/contact/?message=success')
+    return render(request, "burger_app/contact.html", context={"message": "False"})
 
 @csrf_exempt
 def subscribe(request):

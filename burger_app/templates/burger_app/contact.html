@@ -20,7 +20,7 @@
 
         <div id="full-width-header" class="full-width">
             
-            <iframe style="margin-top: 100px; border: 0px solid transparent; border-radius: 100px; margin-left: 5%; margin-right: 5%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202844.46260607112!2d-122.20590634344278!3d37.40296192936466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilikon%20Vadisi%2C%20Kaliforniya%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1727008750656!5m2!1str!2str" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe style="margin-top: 150px; border: 0px solid transparent; border-radius: 100px; margin-left: 5%; margin-right: 5%;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202844.46260607112!2d-122.20590634344278!3d37.40296192936466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb68ad0cfc739%3A0x7eb356b66bd4b50e!2sSilikon%20Vadisi%2C%20Kaliforniya%2C%20Amerika%20Birle%C5%9Fik%20Devletleri!5e0!3m2!1str!2str!4v1727008750656!5m2!1str!2str" width="90%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             
         </div>
         
@@ -48,29 +48,36 @@
                             office@companyname.com<br/>
                         </div>
                     </div>
-                    <div class="contact-form-input-data col">
-                        <div class="contact-form-input-container">
-                            <div class="contact-form-input-icon"><span class="input-icon icon-name">&nbsp;</span></div>
-                            <input type="text" class="contact-form-input-text" placeholder="Your name..."/>
+                    <form method="POST" action="{% url 'burger_app:contact' %}">
+                        {% csrf_token %}
+                        
+                        <div class="contact-form-input-data col">
+                            <div class="contact-form-input-container">
+                                <div class="contact-form-input-icon"><span class="input-icon icon-name">&nbsp;</span></div>
+                                <input type="text" name="name" class="contact-form-input-text" placeholder="Your name..."/>
+                            </div>
+                            <div class="contact-form-input-container">
+                                <div class="contact-form-input-icon"><span class="input-icon icon-email">&nbsp;</span></div>
+                                <input type="email" name="email" class="contact-form-input-text" placeholder="Email..."/>
+                            </div>
+                            <div class="contact-form-input-container">
+                                <div class="contact-form-input-icon"><span class="input-icon icon-telephone">&nbsp;</span></div>
+                                <input type="tel" name="phone" class="contact-form-input-text" placeholder="Phone..."/>
+                            </div>
                         </div>
-                        <div class="contact-form-input-container">
-                            <div class="contact-form-input-icon"><span class="input-icon icon-email">&nbsp;</span></div>
-                            <input type="email" class="contact-form-input-text" placeholder="Email..."/>
+                        <div class="contact-form-input-message col">
+                            <div class="contact-form-input-container">
+                                <div class="contact-form-input-icon"><span class="input-icon icon-message">&nbsp;</span></div>
+                                <textarea name="message" placeholder="Message..." class="contact-form-input-text" ></textarea>
+                            </div>
+                            <div class="button-container">
+                                <input type="submit" value="Send Message" class="button grey-button contact-form-input-submit"/>
+                                {% if request.GET.message == 'success' %}
+                                    <h1 style="font-size: 12px">Your message has been saved successfully. <br> We will get back to you as soon as possible.</h1>
+                                {% endif %}
+                            </div>
                         </div>
-                        <div class="contact-form-input-container">
-                            <div class="contact-form-input-icon"><span class="input-icon icon-website">&nbsp;</span></div>
-                            <input type="url" class="contact-form-input-text" placeholder="Website..."/>
-                        </div>
-                    </div>
-                    <div class="contact-form-input-message col">
-                        <div class="contact-form-input-container">
-                            <div class="contact-form-input-icon"><span class="input-icon icon-message">&nbsp;</span></div>
-                            <textarea placeholder="Message..." class="contact-form-input-text" ></textarea>
-                        </div>
-                        <div class="button-container">
-                            <input type="submit" value="Send Message" class="button grey-button contact-form-input-submit"/>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>

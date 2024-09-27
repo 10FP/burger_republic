@@ -1157,7 +1157,7 @@ ul#list-updates.jobs li:nth-child(2n+1) {
   right: 10px;
 }
 #contact-us .contact-form-input-container {
-  border: 2px solid #aaa497;
+  border: 2px solid #fff;
   height: 50px;
   -webkit-border-radius: 25px 25px 25px 25px;
   -moz-border-radius: 25px 25px 25px 25px;
@@ -1187,7 +1187,7 @@ ul#list-updates.jobs li:nth-child(2n+1) {
   top: 4px;
   border: none;
   background: transparent;
-  color: #979185;
+  color: #fff;
   outline: none;
 }
 #contact-us .contact-form-input-container textarea.contact-form-input-text {
