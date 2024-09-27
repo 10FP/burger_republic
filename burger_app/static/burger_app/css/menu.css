@@ -11,9 +11,13 @@
   }
   
   .image-container img{
-	width: 280px;
+	min-width: 280px;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
 	height: 280px;
-	margin: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 	border-radius: 1rem;
 	transition: 0.5s;
   }
@@ -34,8 +38,9 @@
 	display: none;
 	align-items: center;
 	justify-content: center;
-	background:rgb(0, 0, 0,0.9);
+	background: rgba(243, 146, 35, 0.8);
   }
+
   
   
   .view-image img{
@@ -72,6 +77,10 @@
   .deneme {
 	text-align: center;
 	font-family: "Oswald", sans-serif;
+  }
+  .deneme-div {
+	margin-left: 20px;
+	margin-right: 20px;
   }
   .deneme-div:hover .deneme {
 	display: block;
@@ -261,4 +270,21 @@
 	}
 	
   }
-  
+.view-image h1 {
+	color: crimson;
+	font-size: 40px;
+	position: absolute;
+	top: 100px;
+}
+.view-image p {
+	font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+	color: #000;
+	position: absolute;
+	bottom: 100px;
+}
+.deneme-div p {
+	font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+	color: #000;
+}

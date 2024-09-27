@@ -42,6 +42,10 @@
 </head>
 
 <body>
+    {% block extraHtml %}
+    
+    {% endblock extraHtml %}
+    
     <!-- Main Menu -->
     <nav class="menu menu-left">
         <div class="close-menu-btn icon-menu active">&nbsp;</div>    
@@ -53,7 +57,7 @@
         </ul>
     </nav>
     <!-- Menu Button -->
-    <div class="menu-btn"><span class="icon-menu">&nbsp;</span> Menu</div>
+    <div class="menu-btn"><span class="icon-menu">&nbsp;</span>      </div>
 
     <!-- Entire area of website, menu will dissaper when this area clicked -->
     <div class="site-overlay"></div>

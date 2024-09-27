@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Hamburger, Subscriber
+from .models import Hamburger, Subscriber, MenuHamburger
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -14,7 +14,9 @@ def about(request):
     return render(request, "burger_app/about.html")
 
 def our_food(request):
-    return render(request, "burger_app/food.html")
+    burgers = MenuHamburger.objects.all()
+    context = {"burger": burgers}
+    return render(request, "burger_app/food.html", context=context)
 
 def contact(request):
     return render(request, "burger_app/contact.html")
