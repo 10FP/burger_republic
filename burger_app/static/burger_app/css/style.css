@@ -3388,6 +3388,27 @@ ul#list-updates.jobs li:nth-child(2n+1) {
   .full-width {
     top: -250px;
   }
+  iframe {
+    margin-top: 350px !important;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .full-width {
+    top: -350px;
+    margin-top: 100px !important;
+  }
+  
+}
+@media screen and (max-width: 1000px) {
+  .full-width {
+    margin-top: 350px !important;
+  }
+  #full-width-header {
+    margin-top: 0px !important;
+  }
+  iframe {
+    margin-top: 350px !important;
+  }
 }
 @media screen and (min-width: 1000px) and (max-width: 1199px) {
   /* -------------------------------------------------------*/

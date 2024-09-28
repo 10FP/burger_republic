@@ -4,7 +4,6 @@
 {% block extraCss %}
 
 <link rel="stylesheet" href="{% static 'burger_app/css/menu.css' %}">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Rubik:wght@300;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 {% endblock extraCss %}
@@ -81,13 +80,13 @@
                 <div class="row">
                     <div class="promotion-title col">
                         <div class="title">
-                            <h1>Check out our offers</h1>
+                            <h1>Burgers</h1>
                             <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
                         </div>
                     </div>
                     <div class="promotion-button col">
                         <div class="button-container">
-                             <a class="button white-button">See all promotions</a> 
+                             <!-- <a class="button white-button">See all promotions</a>  -->
                         </div>
                     </div>
                 </div>
@@ -126,22 +125,22 @@
             <!-- For fix float problem and give space area with height 90px -->
             <div class="clear space-area"></div>
         </div>
-        <div class="triangle bottom promotion"></div>
+        <!-- <div class="triangle bottom promotion"></div> -->
 
-        <div class="triangle top promotion"></div>
+        <!-- <div class="triangle top promotion"></div> -->
         <!-- Container for promotion content -->
         <div class="container promotion">
             <div id="promotion" class="main-container">
                 <div class="row">
                     <div class="promotion-title col">
                         <div class="title">
-                            <h1>Check out our offers</h1>
+                            <h1>Fries</h1>
                             <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
                         </div>
                     </div>
                     <div class="promotion-button col">
                         <div class="button-container">
-                             <a class="button white-button">See all promotions</a> 
+                             <!-- <a class="button white-button">See all promotions</a>  -->
                         </div>
                     </div>
                 </div>
@@ -156,14 +155,65 @@
                         
                     
                         <div class="image-container">
-                            {% for burger in burger %}
+                            {% for burger in fries %}
                                 
-                            <div class="deneme-div" style="width: min-content;">
-                                <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
-                                <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
-                                <p class="deneme-description" style="text-align: center;">{{burger.description}}</p>
-                            </div>
-                        {% endfor %}
+                               
+                                <div class="deneme-div" style="width: max-content; max-width: 500px;">
+                                    <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
+                                    <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p class="deneme-description" style="text-align: center; word-wrap: break-word;">{{burger.description}}</p>
+                                </div>
+                            {% endfor %}
+                           
+
+                        </div>
+                      </section>
+
+
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+
+            <!-- For fix float problem and give space area with height 90px -->
+            <div class="clear space-area"></div>
+        </div>
+
+        <div class="container promotion">
+            <div id="promotion" class="main-container">
+                <div class="row">
+                    <div class="promotion-title col">
+                        <div class="title">
+                            <h1>Drinks</h1>
+                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                        </div>
+                    </div>
+                    <div class="promotion-button col">
+                        <div class="button-container">
+                             <!-- <a class="button white-button">See all promotions</a>  -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+                <ul id="promotion-product" class="row">
+                    
+                    
+                    
+                    <section class="gallery-2" style="margin-top: 75px; border-bottom: 2px solid red;">
+                        
+                    
+                        <div class="image-container">
+                            {% for burger in drinks %}
+                                
+                               
+                                <div class="deneme-div" style="width: max-content; max-width: 500px;">
+                                    <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
+                                    <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p class="deneme-description" style="text-align: center; word-wrap: break-word;">{{burger.description}}</p>
+                                </div>
+                            {% endfor %}
                            
 
                         </div>
@@ -179,6 +229,58 @@
             <div class="clear space-area"></div>
         </div>
         <div class="triangle bottom promotion"></div>
+
+        <div class="triangle top promotion"></div>
+        <!-- Container for promotion content -->
+        <div class="container promotion">
+            <div id="promotion" class="main-container">
+                <div class="row">
+                    <div class="promotion-title col">
+                        <div class="title">
+                            <h1>Offers</h1>
+                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                        </div>
+                    </div>
+                    <div class="promotion-button col">
+                        <div class="button-container">
+                             <!-- <a class="button white-button">See all promotions</a>  -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="clear"></div>
+
+                <ul id="promotion-product" class="row">
+                    
+                    
+                    
+                    <section class="gallery-2" style="margin-top: 75px; border-bottom: 2px solid red;">
+                        
+                    
+                        <div class="image-container">
+                            {% for burger in offers %}
+                                
+                               
+                                <div class="deneme-div" style="width: max-content; max-width: 500px;">
+                                    <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
+                                    <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
+                                    <p class="deneme-description" style="text-align: center; word-wrap: break-word;">{{burger.description}}</p>
+                                </div>
+                            {% endfor %}
+                           
+
+                        </div>
+                      </section>
+
+
+
+                    <div class="clear"></div>
+                </ul>
+            </div>
+
+            <!-- For fix float problem and give space area with height 90px -->
+            <div class="clear space-area"></div>
+        </div>
         
         
         

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .models import Hamburger, Subscriber, MenuHamburger, Contact
+from .models import Hamburger, Subscriber, MenuHamburger, Contact, MenuFries, MenuDrink
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -16,7 +16,11 @@ def about(request):
 
 def our_food(request):
     burgers = MenuHamburger.objects.all()
-    context = {"burger": burgers}
+    fries = MenuFries.objects.all()
+    drinks = MenuDrink.objects.all()
+    offers = Hamburger.objects.all()
+    context = {"burger": burgers, "fries": fries, "drinks": drinks, "offers": offers}
+
     return render(request, "burger_app/food.html", context=context)
 
 def contact(request):
