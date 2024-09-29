@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extraHtml %}
+<img class="logo-coming-soon" id="animated-logo" src="{% static 'burger_app/img/comingsoonlogo.png' %}" alt="Burger Republic's logo"/>
+
+{% endblock extraHtml %}
 {% block content %}
+
+
 
 
     <!-- The main page goes here -->
@@ -11,8 +17,9 @@
             <div class="main-container row">
                 <div id="logo">
                     <a href="index.html">
-                        <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" /></div>
+                        <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" alt="Burger Republic's logo"/></div>
                         <div class="logo-type">Burger Republic</div>
+
                         <!-- <div class="logo-slogan">slogan here</div>  -->
                     </a>
                 </div>
@@ -40,7 +47,7 @@
                             <h1>Tempus Risus</h1>
                         </div>
                         <!-- Image width and height automatically adjust depends on window width in js/slider.js -->
-                        <img src="{% static 'burger_app/img/slider/burger_slider2.jpg' %}" width="1980" height="1040">
+                        <img src="{% static 'burger_app/img/burgerslider2_.jpg' %}" alt="Burger Republic's Burger" width="1980" height="1040">
                     </div>
                 </div>
                 <div class="slide">
@@ -55,7 +62,7 @@
                             </span>
                             <h1>Tempus Risus</h1>
                         </div>
-                        <img src="{% static 'burger_app/img/slider/burger_slider.jpg' %}" width="1980" height="1040">
+                        <img src="{% static 'burger_app/img/burgerslider_.jpg' %}" alt="Burger Republic's burger" width="1980" height="1040">
                     </div>
                 </div>
                 <div class="slide">
@@ -70,7 +77,7 @@
                             </span>
                             <h1>Tempus Risus</h1>
                         </div>
-                        <img src="{% static 'burger_app/img/burger_slider3.jpg' %}" width="1980" height="1040">
+                        <img src="{% static 'burger_app/img/burgerslider3_.jpg' %}" alt="Burger Republic's Burger" width="1980" height="1040">
                     </div>
                 </div>
             </div>
@@ -92,7 +99,7 @@
         <div class="clear"></div>
 
         <!-- Container for featured content -->
-        <div class="container">
+        <div class="container" style="margin-top: 200px;">
             <div id="featured" class="main-container">
                 <div class="row">
                     <div class="featured-left col">
@@ -109,7 +116,7 @@
                     </div>
                     <div class="featured-right col">
                         <div class="featured-image">
-                            <img src="{% static 'burger_app/img/featured/burger.png' %}"/>
+                            <img src="{% static 'burger_app/img/featured/burger.png' %}" alt="Burger Republic's burger png"/>
                         </div>
                     </div>
                 </div>
@@ -180,3 +187,13 @@
 
         <div class="clear"></div>
 {% endblock content %}
+
+{% block extraJS %}
+<script>
+    const image = document.querySelector("#animated-logo")
+    image.classList.remove("logo-coming-soon")
+    image.classList.add("logo-coming-soon-after")
+
+</script>
+{% endblock extraJS %}
+

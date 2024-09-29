@@ -9,7 +9,7 @@ app_name = 'burger_app'
 urlpatterns = [
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
-    path("our_food/", views.our_food, name="our_food"),
+    path("menu/", views.our_food, name="our_food"),
     path("contact/", views.contact, name="contact"),
     path('subscribe/', views.subscribe, name='subscribe'),
 ]

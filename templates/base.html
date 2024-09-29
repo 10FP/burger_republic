@@ -1,25 +1,27 @@
 
 {% load static %}
 <!DOCTYPE html>
+
 <!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]> <html class="lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="lt-ie9"> <![endif]-->
 <!--[if IE 9 ]> <html class="ie9"> <![endif]-->
-<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
 
 <head>
+    
     <!-- Load Google font on the first <head> to prevent error in IE -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,800,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,800,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.1/css/all.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
 	<title>Burger Bar</title>
 	<meta name="author" content="Burger Bar" />
 	<meta name="description" content="Burger Bar Description" />
 	<meta name="keywords"  content="Burger Bar Keyword" />
-  	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'burger_app/css/style.css' %}">
     {% block extraCss %}
     
@@ -53,7 +55,7 @@
         <div class="close-menu-btn icon-menu active">&nbsp;</div>    
         <ul>
             <li class="active"><a href="{% url 'burger_app:index' %}">Home</a></li>
-            <li><a href="{% url 'burger_app:our_food' %}">Our Food | Offers</a></li>
+            <li><a href="{% url 'burger_app:our_food' %}">Menu | Offers</a></li>
             <li><a href="{% url 'burger_app:about' %}">About Us</a></li>
             <li><a href="{% url 'burger_app:contact' %}">Contact</a></li>
         </ul>
@@ -78,10 +80,10 @@
                 <div class="footer-top row">
                     <div class="footer-info col">
                         <div class="footer-logo">
-                            <div class="logo-icon"><img src="{% static 'burger_app/img/footer-logo.png' %}" /></div>
+                            <div class="logo-icon"><img src="{% static 'burger_app/img/footer-logo.png' %}" alt="Burger Republic's logo"/></div>
                         </div>
                         <div class="footer-address">
-                            <a href="https://www.google.ca/maps/place/Burger+Republic/@43.6491981,-79.4242787,17z/data=!4m6!3m5!1s0x882b35dec41295ab:0x5f004a4bd9ba0599!8m2!3d43.6491942!4d-79.4217038!16s%2Fg%2F11w8y900y3?entry=tts&g_ep=EgoyMDI0MDkxOC4xKgBIAVAD">
+                            <a target="_blank" href="https://www.google.ca/maps/place/Burger+Republic/@43.6491981,-79.4242787,17z/data=!4m6!3m5!1s0x882b35dec41295ab:0x5f004a4bd9ba0599!8m2!3d43.6491942!4d-79.4217038!16s%2Fg%2F11w8y900y3?entry=tts&g_ep=EgoyMDI0MDkxOC4xKgBIAVAD">
                             Burger Republic</br>1171 Dundas St W, Toronto, ON M6J 1X3, Canada
                         </a>
                         </div>
@@ -109,9 +111,11 @@
                         <div class="social-media-icon">
                             <!-- <span class="icon-social-media icon-facebook">&nbsp;</span>
                             <span class="icon-social-media icon-google">&nbsp;</span> -->
-                            <a href=""><i style="color: white; margin-right: 5px;" class="fa-brands fa-instagram"></i></a>
-                            <a href=""></a><i style="color: white; margin-right: 5px;" class="fa-brands fa-facebook"></i></a>
-                            <a href=""></a><i style="color: white;" class="fa-brands fa-google"></i></a>
+                            <a href="https://instagram.com" aria-label="Burger Republic Instagram">
+                                <i style="color: white; margin-right: 5px; font-size: 24px;" class="fa-brands fa-instagram"></i>
+                              </a>
+                            <a href=""  aria-label="Burger Republic Facebook"><i style="color: white; margin-right: 5px; font-size: 24px;" class="fa-brands fa-facebook"></i></a>
+                            <a href=""  aria-label="Burger Republic Google"><i style="color: white; font-size: 24px;" class="fa-brands fa-google"></i></a>
                         </div>
                     </div>
                     <div class="clear"></div>
