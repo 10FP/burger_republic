@@ -9,7 +9,7 @@
         <div class="container">
             <div class="main-container row">
                 <div id="logo">
-                    <a href="index.html">
+                    <a href="{% url 'burger_app:index' %}">
                         <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" /></div>
                         <div class="logo-type">Burger Republic</div>
                         <!-- <div class="logo-slogan">slogan here</div>  -->
@@ -34,12 +34,12 @@
                             <h1>Contact</h1>
                         </div>
                         <div class="intro">
-                            <h2>Neque porro quisquam est, qui dolorem ipsum quia dolor.</h2>
+                            <!-- <h2>Neque porro quisquam est, qui dolorem ipsum quia dolor.</h2> -->
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="contact-address col">
+                    <!-- <div class="contact-address col">
                         <div class="contact-address-container" style="color: white;">
                             <span class="dot dot-left-top">&nbsp;</span><span class="dot dot-right-top">&nbsp;</span><span class="dot dot-left-bottom">&nbsp;</span><span class="dot dot-right-bottom">&nbsp;</span>
                             Company name<br/>
@@ -47,7 +47,7 @@
                             (432) 421 693 812<br/>
                             office@companyname.com<br/>
                         </div>
-                    </div>
+                    </div> -->
                     <form method="POST" action="{% url 'burger_app:contact' %}">
                         {% csrf_token %}
                         

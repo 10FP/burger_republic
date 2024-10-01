@@ -6,7 +6,7 @@
     <div class="container">
         <div class="main-container row">
             <div id="logo">
-                <a href="index.html">
+                <a href="{% url 'burger_app:index' %}">
                     <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" /></div>
                     <div class="logo-type">Burger Republic</div>
                     <!-- <div class="logo-slogan">slogan here</div>  -->
@@ -20,7 +20,7 @@
         <div class="inner">
             <div class="slide">
                 <div class="inner-slide">
-                    <img class="about_image"  src="{% static 'burger_app/img/about.jpg' %}" style="max-height: 560px!important; border-radius: 100px;">
+                    <img class="about_image"  src="{% static 'burger_app/img/burger_image/burger_1.jpeg' %}" style="max-height: 560px!important; border-radius: 100px;">
                 </div>
             </div>
         </div>
@@ -42,7 +42,7 @@
                     <div class="content">
                         <p>At Burger Republic, we believe that burgers are more than just a meal—they are an experience. What began as a shared passion between three friends has now grown into a mission to spread the love for mouthwatering, perfectly crafted burgers. Every burger we create is a celebration of quality ingredients, attention to detail, and an unrelenting commitment to flavor. From the first bite, we aim to not only satisfy your hunger but to ignite your senses with the perfect blend of savory flavors and fresh ingredients.</p>
                         <div class="content-thumbnail half align-left">
-                            <img src="{% static 'burger_app/img/burgerslider_.jpg' %}"/>
+                            <img src="{% static 'burger_app/img/burger_slider.jpg' %}"/>
                         </div>
                         <p> We are dedicated to elevating your burger experience by offering something unique, something memorable. Our chefs work tirelessly to perfect every element, from the juiciness of the patties to the freshness of the toppings. Whether you’re looking for a classic burger or something more adventurous, we promise to deliver a flavor explosion that will have you coming back for more. Each visit to Burger Republic is a chance to discover new and exciting tastes, all crafted with love and passion. </p><p>At the core of our mission is a commitment to excellence. We don’t just want to meet your expectations; we aim to exceed them. We believe that everyone deserves a better burger, and we are here to make that happen. Join us at Burger Republic and let us share with you the incredible journey of flavors that started with just three friends and has since become a burger revolution.
                         </p>

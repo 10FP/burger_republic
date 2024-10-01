@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
 {% block extraHtml %}
-<img class="logo-coming-soon" id="animated-logo" src="{% static 'burger_app/img/comingsoonlogo.png' %}" alt="Burger Republic's logo"/>
+<div id="photo-container">
+    <img style="width: 100%;" src="{% static 'burger_app/img/bg.png' %}" alt="Coming Soon">
+  </div>
 
 {% endblock extraHtml %}
 {% block content %}
@@ -10,13 +12,13 @@
 
 
     <!-- The main page goes here -->
-    <div id="container">
+    <div id="container" style="display: none;">
 
         <!-- Logo, Company Name, and Slogan Area -->
         <div class="container">
             <div class="main-container row">
                 <div id="logo">
-                    <a href="index.html">
+                    <a href="{% url 'burger_app:index' %}">
                         <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" alt="Burger Republic's logo"/></div>
                         <div class="logo-type">Burger Republic</div>
 
@@ -47,7 +49,7 @@
                             <h1>Tempus Risus</h1>
                         </div>
                         <!-- Image width and height automatically adjust depends on window width in js/slider.js -->
-                        <img src="{% static 'burger_app/img/burgerslider2_.jpg' %}" alt="Burger Republic's Burger" width="1980" height="1040">
+                        <img src="{% static 'burger_app/img/burger_image/burger_9.jpeg' %}" alt="Burger Republic's Burger" width="1980" height="1040">
                     </div>
                 </div>
                 <div class="slide">
@@ -62,7 +64,7 @@
                             </span>
                             <h1>Tempus Risus</h1>
                         </div>
-                        <img src="{% static 'burger_app/img/burgerslider_.jpg' %}" alt="Burger Republic's burger" width="1980" height="1040">
+                        <img src="{% static 'burger_app/img/burger_image/burger_8.jpeg' %}" alt="Burger Republic's burger" width="1980" height="1040">
                     </div>
                 </div>
                 <div class="slide">
@@ -77,7 +79,7 @@
                             </span>
                             <h1>Tempus Risus</h1>
                         </div>
-                        <img src="{% static 'burger_app/img/burgerslider3_.jpg' %}" alt="Burger Republic's Burger" width="1980" height="1040">
+                        <img src="{% static 'burger_app/img/burger_image/burger_6.jpeg' %}" alt="Burger Republic's Burger" width="1980" height="1040">
                     </div>
                 </div>
             </div>
@@ -186,14 +188,61 @@
             </div> -->
 
         <div class="clear"></div>
+
+        <h1 style="color: white; text-align: center; margin-bottom: 50px; margin-top: 50px;">Check out our Instagram posts</h1>
+
+        <div id="instagram-posts">
+            
+        </div>
+        
 {% endblock content %}
 
 {% block extraJS %}
 <script>
-    const image = document.querySelector("#animated-logo")
-    image.classList.remove("logo-coming-soon")
-    image.classList.add("logo-coming-soon-after")
+    
+    setTimeout(() => {
+      // Yavaşça kaybolma class'ını ekle
+      document.getElementById('photo-container').classList.add('fade-out');
+      
+      // Geçiş süresi tamamlandıktan sonra (2 saniye), içeriği göster
+      setTimeout(() => {
+        
+        document.getElementById('container').style.display = 'block';
+        document.getElementById('photo-container').style.display = "none"
+      }, 2000); 
+    }, 3000); 
+  </script>
+<script>
+    const accessToken = 'IGQWRNUkhETXFUeUFWVzVGNjFQUEZAlSm1BbUFNMi1feUd3X3p5MGpFdTZAQd3pxQmNkVVhwQWxEa240bnhfZA21jY1NZAQ0NfYzVxLUhHWUtTLW16RFVkUzZATSGUtZAmtoTEVaamVtMXdGVEFXcWRsUW5ZAY0JQYmtXRGsZD';  // Buraya erişim tokeninizi ekleyin
+    const userID = '27787334714198776';  // Buraya kullanıcı ID'nizi ekleyin
 
+    // Instagram Graph API endpointi
+    const url = `https://graph.instagram.com/${userID}/media?fields=id,caption,media_url,permalink&access_token=${accessToken}`;
+
+    // API'yi çağırarak son gönderileri çekiyoruz
+    fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                let postsHtml = '';  // HTML içeriğini burada biriktireceğiz
+                
+                // İlk 3 gönderiyi alıyoruz (en fazla 3 gönderi olacak şekilde)
+                const latestPosts = data.data.slice(0, 3);
+
+                latestPosts.forEach(post => {
+                    postsHtml += `
+                    <div class="insta-posts">
+                        
+                        <a href="${post.permalink}" target="_blank">
+                        <img class="insta-posts-photo" src="${post.media_url}" alt="Instagram Post">
+                        </a>
+                    </div>
+                    `;
+                });
+
+                // İçeriği sayfada gösteriyoruz
+                document.getElementById('instagram-posts').innerHTML = postsHtml;
+            })
+            .catch(error => console.error('Error:', error));
 </script>
 {% endblock extraJS %}
 

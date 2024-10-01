@@ -33,7 +33,7 @@
 /* -------------------------------------------------------*/
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: "New Amsterdam", sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -134,7 +134,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace,monospace;
+  font-family: "New Amsterdam", sans-serif;
   font-size: 1em;
 }
 button,
@@ -216,14 +216,14 @@ th {
 }
 /* Embed Font for IE */
 @font-face {
-  font-family: 'Kaushan Script';
+  font-family: "New Amsterdam", sans-serif;
   src: url('kaushanscript-regular-webfont.eot');
   src: url('kaushanscript-regular-webfont.eot?#iefix') format('embedded-opentype'), url('kaushanscript-regular-webfont.woff') format('woff'), url('kaushanscript-regular-webfont.ttf') format('truetype'), url('kaushanscript-regular-webfont.svg#kaushan_scriptregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Open Sans Bold';
+  font-family: "New Amsterdam", sans-serif;
   src: url('opensans-bold-webfont.eot');
   src: url('opensans-bold-webfont.eot?#iefix') format('embedded-opentype'), url('opensans-bold-webfont.woff') format('woff'), url('opensans-bold-webfont.ttf') format('truetype'), url('opensans-bold-webfont.svg#open_sansbold') format('svg');
   font-weight: normal;
@@ -285,19 +285,20 @@ th {
 /* -------------------------------------------------------*/
 html,
 body {
-  overflow-x: hidden;
+  
   /* prevents horizontal scroll bars */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* disable webkit tap highlight */
   height: 100%;
   /* fixes focus scrolling in Safari (OS X) */
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
   background: black;
 }
 input[type="text"] {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "New Amsterdam", sans-serif;
   font-weight: 600;
   font-size: 12px;
 }
@@ -412,7 +413,7 @@ input[type="text"] {
   text-decoration: none;
 }
 .main-container p {
-  font-size: 14px;
+  font-size: 18px;
   color: #fff;
   line-height: 30px;
 }
@@ -572,7 +573,7 @@ a.icon-link.arrow:hover {
 }
 .menu ul li a {
   color: #FFF;
-  font-size: 12px;
+  font-size: 18px;
   display: block;
   padding: 20px 0;
   text-decoration: none;
@@ -4632,22 +4633,58 @@ html.ie .price-tag .price {
   font-family: 'Open Sans ExtraBold', sans-serif;
 }
 
-.logo-coming-soon {
-  width: 150px;
-  margin-left: 45%;
-  margin-top: 45%;
+#photo-container {
   position: fixed;
-  z-index: 9999999999;
-  max-height: 100vh;
-  transition: all 2s ease; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible; /* Başlangıçta görünüyor */
+  transition: opacity 2s ease; /* Opacity geçişini aktif et */
 }
 
-.logo-coming-soon-after {
-  width: 150px;
-  max-height: 150px;
-  position: fixed;
-  top: 0px;
-  right: 5%;
-  z-index: 99999999;
-  transition: all 2s ease; 
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Fotoğraf kaybolduktan sonra class ekle */
+.fade-out {
+
+  opacity: 0 !important; /* Yavaşça kaybolması */
+}
+
+#instagram-posts {
+  display: inline-flex;
+  width: 90%;
+  margin-left: 5%;
+}
+.insta-posts {
+
+}
+.insta-posts-photo {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5px;
+}
+
+#contact-us .row .contact-form-input-data {
+  margin-left: 17% !important;
+  border-left-width: 0px !important;
+}
+
+/* -------------------------------------------------------*/
+@media screen and  (max-width: 850px) {
+  #contact-us .row .contact-form-input-data {
+    margin-left: 0% !important;
+    border-left-width: 0px !important;
+  }
 }

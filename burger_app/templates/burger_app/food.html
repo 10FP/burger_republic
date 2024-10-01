@@ -27,7 +27,7 @@
         <div class="container">
             <div class="main-container row">
                 <div id="logo">
-                    <a href="index.html">
+                    <a href="{% url 'burger_app:index' %}">
                         <div class="logo-icon"><img src="{% static 'burger_app/img/logo.png' %}" /></div>
                         <div class="logo-type">Burger Republic</div>
 
@@ -58,7 +58,7 @@
                             <h1>Menu</h1>
                         </div>
                         <div class="intro">
-                            <h2>Bold Burgers, Fresh Ingredients—Taste the Difference.</h2>
+                            <h2></h2>
                         </div>
                         <div class="content">
                             <p>At Burger Republic, our menu is crafted with care, offering a variety of bold, flavorful burgers made from the freshest ingredients. From juicy classics to adventurous new flavors, each bite promises to satisfy your cravings and elevate your burger experience.</p>
@@ -82,7 +82,7 @@
                     <div class="promotion-title col">
                         <div class="title">
                             <h1>Burgers</h1>
-                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                            
                         </div>
                     </div>
                     <div class="promotion-button col">
@@ -105,7 +105,7 @@
                                 {% for burger in burger %}
                                 
                                
-                                <div class="deneme-div" style="width: max-content; max-width: 500px; min-height: 600px;" >
+                                <div class="deneme-div" style="width: max-content; max-width: 300px; min-height: 600px;" >
                                     <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
                                     <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
                                     <p class="deneme-description" style="text-align: center; word-wrap: break-word;">{{burger.description}}</p>
@@ -136,7 +136,7 @@
                     <div class="promotion-title col">
                         <div class="title">
                             <h1>Fries</h1>
-                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                            
                         </div>
                     </div>
                     <div class="promotion-button col">
@@ -159,7 +159,7 @@
                             {% for burger in fries %}
                                 
                                
-                                <div class="deneme-div" style="width: max-content; max-width: 500px;">
+                                <div class="deneme-div" style="width: max-content; max-width: 300px; min-height: 600px;">
                                     <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
                                     <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
                                     <p class="deneme-description" style="text-align: center; word-wrap: break-word;">{{burger.description}}</p>
@@ -186,7 +186,7 @@
                     <div class="promotion-title col">
                         <div class="title">
                             <h1>Drinks</h1>
-                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                            
                         </div>
                     </div>
                     <div class="promotion-button col">
@@ -209,7 +209,7 @@
                             {% for burger in drinks %}
                                 
                                
-                                <div class="deneme-div" style="width: max-content; max-width: 500px;">
+                                <div class="deneme-div" style="width: max-content; max-width: 300px; min-height: 600px;">
                                     <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
                                     <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
                                     <p class="deneme-description" style="text-align: center; word-wrap: break-word;">{{burger.description}}</p>
@@ -239,7 +239,7 @@
                     <div class="promotion-title col">
                         <div class="title">
                             <h1>Offers</h1>
-                            <h2 class="sub-title">Eat More, Spend Less: Flavor-Packed Deals Await!</h2>
+                            
                         </div>
                     </div>
                     <div class="promotion-button col">
@@ -262,7 +262,7 @@
                             {% for burger in offers %}
                                 
                                
-                                <div class="deneme-div" style="width: max-content; max-width: 400px; height: 600px;">
+                            <div class="deneme-div" style="width: max-content; max-width: 300px; min-height: 600px;">
                                     <h1 style="margin: 0; text-align: center; white-space: nowrap;" class="deneme-name">{{burger.name}}</h1>
                                     <img src="{{burger.image.url}}" alt="gms yapı inşaat bostancı" class="deneme-img">
                                     <p class="deneme-description" style="text-align: center; word-wrap: break-word;">{{burger.description}}</p>
