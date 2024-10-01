@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-2vo&+b9tk$y5_(4_zl*(sowr+#+i*zb@_*(k2uj8dck4s_9l(1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -41,8 +41,7 @@ INSTALLED_APPS = [
     'burger_app'
 ]
 
-MEDIA_ROOT = BASE_DIR / "uploads"
-MEDIA_URL = "/images/"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -122,8 +121,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+MEDIA_URL = '/uploads/'
 STATIC_URL = '/static/'
-
+MEDIA_ROOT = BASE_DIR / "uploads"
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [
+    (os.path.join(BASE_DIR, 'static')),
+    (os.path.join(BASE_DIR, 'media')),
+                    ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
